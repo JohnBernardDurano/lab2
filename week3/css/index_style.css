@@ -83,9 +83,10 @@ header .navigation a:hover{
   color: aliceblue;
 }
 
-.main .discord-btn{
+.discord-btn{
   display: inline-block;
   padding: 15px 25px;
+  margin-top: 10px;
   font-family: 'Bebas Neue';
   font-size: 35px;
   cursor: pointer;
@@ -101,7 +102,7 @@ header .navigation a:hover{
   width: 200px;
 }
 
-.main .discord-btn:hover{
+.discord-btn:hover{
   background: #0C4F60;
 }
 
