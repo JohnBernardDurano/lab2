@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <title>Javascript Testing Grounds</title>
     <link rel="icon" type="image/x-icon" href="../images/FFHooray.png">
-    <link rel="stylesheet" href="css/index_style.css">
+    <link rel="stylesheet" href="css/jstest_style.css">
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
   </head>
-  <body class="bodyStyle">
+  <body data-daytime class="bodyStyle">
 
   <!-- Javascript Testing Grounds -->
 
@@ -43,9 +43,41 @@
   </section>
 -->
 <section>
-    
+  <button onclick="document.getElementById('myImage').src='images/alinlin.png'">Turn on the light</button>
+
+<img id="myImage" src="images/FFHooray.png" style="width:100px">
+
+<button onclick="document.getElementById('myImage').src='images/badudong.png'">Turn off the light</button>
+
 </section>
+
+<script>
+  
+  function SetImage(){     
+    var nowdate = new Date();    
+    var waketime = new Date();     
+    waketime.setHours(6);
+    waketime.setMinutes(30);
+    
+    var bedtime = new Date();     
+    bedtime.setHours(18);
+    bedtime.setMinutes(30);
+    
+    if(waketime < nowdate  && nowdate < bedtime) {
+         document.body.setAttribute('data-daytime','');
+    }else{
+         document.body.setAttribute('data-nighttime','');
+    }
+}
+
+</script>
+
+<div class="toggle-time">
+  Hello There.
+</div>
+
 <p>This page is currently being worked on. Please be patient.</p>
+<button onclick="this.innerHTML=Date()">The time is?</button>
   <footer>
     <p>&quot;You are now under the Badudong that is always watching.&quot;</p>
   </footer>
