@@ -83,39 +83,8 @@
     color: aliceblue;
   }
   
-  .main .discord-btn{
-    display: inline-block;
-    padding: 15px 25px;
-    font-family: 'Bebas Neue';
-    font-size: 35px;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    letter-spacing: 1px;
-    outline: none;
-    color: #fff;
-    background-color: #0f639e;
-    border: none;
-    border-radius: 8px;
-    box-shadow: 15px 10px #999;
-    width: 200px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-  
-  .main .discord-btn:hover{
-    background: #0C4F60;
-  }
-
   .main .title h1{
     font-size: 50px;
-  }
-  
-  .badudong_img {
-    float: left;
-    width: 20%;
-    text-align: center;
-    padding-left: 170px;
   }
   
   @media only screen and (max-width: 620px) {
