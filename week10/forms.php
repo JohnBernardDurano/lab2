@@ -67,6 +67,48 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $gender = test_input($_POST["gender"]);
   }
 
+if (empty($_POST["name"])) {
+  $nameErr = "Name is required";
+} else {
+  $name = test_input($_POST["lastname"]);
+  // check if lastname only contains letters and whitespace
+  if (!preg_match("/^[a-zA-Z-' ]*$/",$lastname)) {
+    $lastnameErr = "Only letters and white space allowed";
+  }
+}
+
+if (empty($_POST["email"])) {
+  $emailErr = "Email is required";
+} else {
+  $email = test_input($_POST["email"]);
+  // check if e-mail address is well-formed
+  if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    $emailErr = "Invalid email format";
+  }
+}
+  
+if (empty($_POST["website"])) {
+  $website = "";
+} else {
+  $website = test_input($_POST["website"]);
+  // check if URL address syntax is valid (this regular expression also allows dashes in the URL)
+  if (!preg_match("/\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]/i",$website)) {
+    $websiteErr = "Invalid URL";
+  }
+}
+
+if (empty($_POST["gender"])) {
+  $genderErr = "Selecting something is required";
+} else {
+  $gender = test_input($_POST["gender"]);
+}
+
+if (empty($_POST["comment"])) {
+  $comment = "";
+} else {
+  $comment = test_input($_POST["comment"]);
+}
+
 function test_input($data) {
   $data = trim($data);
   $data = stripslashes($data);
@@ -104,6 +146,37 @@ echo "<div style=\"color:aliceblue;\">" . $gender . "</div>";
 echo "<br>";
 echo "<div style=\"color:aliceblue;\">" . $messages . "</div>";
 ?>
+
+<?php
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") 
+{
+
+	$servername = "localhost";
+	$username = "webprogmi212";
+	$password = "webprogmi212";
+	$dbname = "webprogmi212";
+	
+	// Create connection
+	$conn = new mysqli($servername, $username, $password, $dbname);
+	// Check connection
+	if ($conn->connect_error) {
+	die("Connection failed: " . $conn->connect_error);
+	}
+	
+	$sql = "INSERT INTO mnturingan_myallies (firstname, lastname, email)
+	VALUES ('$name', '$lastname', '$email')";
+	
+	if ($conn->query($sql) === TRUE) {
+	echo "You just joined the alliance. There is no going back. Hehe";
+	} else {
+	echo "Error: " . $sql . "<br>" . $conn->error;
+	}
+	
+	$conn->close();
+}
+?>
+
 </section>
 
 
