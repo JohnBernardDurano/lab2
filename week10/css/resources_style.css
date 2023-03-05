@@ -1,0 +1,94 @@
+
+* {
+    margin: auto;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  body {
+    font-family: 'Bebas Neue';
+  }
+  
+  
+  header {
+    background-color: #666;
+    padding: 30px;
+    text-align: center;
+    font-size: 20px;
+    color: #000;
+  }
+  
+  section {
+    position: relative;
+    min-height: 84.3vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: #03253d;
+  }
+  
+  
+  footer {
+    background-color: #777;
+    padding: 10px;
+    text-align: center;
+    color: aliceblue;
+    font-family: 'Bebas Neue';
+  }
+  
+  header .navigation{
+    color: #0C4F60;
+    font-size: 22px;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 2px 15px;
+    border-radius: 20px;
+    transition: 0.3s;
+    margin-left: auto;
+    transition-property: none;
+  }
+  
+  header .navigation a{
+    color: #0C4F60;
+    font-size: 40px;
+    font-family: 'Bebas Neue';
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 2px 15px;
+    border-radius: 20px;
+    transition: 0.3s;
+    transition-property: none;
+  }
+  
+  header .navigation a:not(:last-child){
+    margin-right: 30px;
+  }
+  
+  header .navigation a:hover{
+    background: #1D3FB4;
+    color: #fff;
+  }
+  
+  .main {
+    float: left;
+    width: 60%;
+    padding: 0 20px;
+    padding-top: 25px;
+    padding-left: 170px;
+    font-size: 30px;
+    text-align: justify;
+    color: aliceblue;
+  }
+  
+  .main .title h1{
+    font-size: 50px;
+  }
+  
+  @media only screen and (max-width: 620px) {
+    .main, .badudong_img {
+      width: 100%;
+    }
+  }
