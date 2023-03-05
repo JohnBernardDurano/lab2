@@ -75,10 +75,10 @@ echo "<br>";
 if ($_SERVER["REQUEST_METHOD"] == "POST") 
 {
 
-	$servername = "localhost";
-	$username = "root";
-	$password = "";
-	$dbname = "guestdb";
+	$servername = "192.168.150.213";
+	$username = "webprogmi212";
+	$password = "b3ntRhino98";
+	$dbname = "webprogmi212";
 	
 	// Create connection
 	$conn = new mysqli($servername, $username, $password, $dbname);
