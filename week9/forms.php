@@ -39,7 +39,9 @@ function test_input($data) {
   return $data;
 }
 ?>
-
+<?php
+echo "<h2>Input your details.</h2>";
+?>
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" style="text-align: right; color:aliceblue;">  
   Name: <input type="text" name="name">
   <br><br>
