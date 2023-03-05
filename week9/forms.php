@@ -44,7 +44,7 @@ function test_input($data) {
             <img src="images/badudong.png" alt="The Badudong" >
         </div>
 
-<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" style="text-align: right;">  
   Name: <input type="text" name="name">
   <br><br>
   E-mail: <input type="text" name="email">
