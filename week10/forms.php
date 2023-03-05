@@ -87,7 +87,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 	die("Connection failed: " . $conn->connect_error);
 	}
 	
-	$sql = "INSERT INTO guests (gstname, email, website, vtuber, messages)
+	$sql = "INSERT INTO jsdurano_guests (gstname, email, website, vtuber, messages)
 	VALUES ('$name', '$email', '$website', '$vtuber', '$messages')";
 	
 	if ($conn->query($sql) === TRUE) {
