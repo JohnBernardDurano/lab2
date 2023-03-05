@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>FFHooray</title>
     <link rel="icon" type="image/x-icon" href="../images/FFHooray.png">
-    <link rel="stylesheet" href="css/index_style.css">
+    <link rel="stylesheet" href="css/forms_style.css">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
 <head>
@@ -39,10 +39,6 @@ function test_input($data) {
   return $data;
 }
 ?>
-
-<div>
-            <img src="images/badudong.png" alt="The Badudong" >
-        </div>
 
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" style="text-align: right; color:aliceblue;">  
   Name: <input type="text" name="name">
