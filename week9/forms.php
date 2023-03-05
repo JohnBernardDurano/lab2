@@ -62,17 +62,17 @@ echo "<h2>Input your details.</h2>";
 
 <?php
 echo "<h2>Your Input:</h2>";
-echo $name;
+echo "<div style=\"color:aliceblue;\">" . $name . "</div>";
 echo "<br>";
-echo $email;
+echo "<div style=\"color:aliceblue;\">" . $email . "</div>";
 echo "<br>";
-echo $website;
+echo "<div style=\"color:aliceblue;\">" . $website . "</div>";
 echo "<br>";
-echo $vtuber;
+echo "<div style=\"color:aliceblue;\">" . $vtuber . "</div>";
 echo "<br>";
-echo $gender;
+echo "<div style=\"color:aliceblue;\">" . $gender . "</div>";
 echo "<br>";
-echo $messages;
+echo "<div style=\"color:aliceblue;\">" . $messages . "</div>";
 ?>
 </section>
 
